@@ -13,7 +13,7 @@
     "element-ui": "^2.6.3",
     "fecha": "^3.0.2",
     "lodash": "^4.17.11",
-    "vue-form-generator": "2.2.1"
+    "vue-form-generator": "https://github.com/gt4w-consultoria/vue-form-generator-gt4w"
   },
   "devDependencies": {
     "@vue/cli-plugin-eslint": "^3.4.0",
