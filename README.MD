@@ -4,7 +4,7 @@ Fields for [vue-form-generator](https://github.com/vue-generators/vue-form-gener
 ### Usage
 
 ```$xslt
-yarn add vue-form-generator-element
+yarn add vue-form-generator-element-gt4w
 ```
 
 Add following code in main.js:
