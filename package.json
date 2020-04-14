@@ -1,8 +1,8 @@
 {
-  "name": "vue-form-generator-element",
+  "name": "vue-form-generator-element-gt4w",
   "version": "1.1.1",
   "description": "Element (https://element.eleme.io) fields for vue-form-generator",
-  "author": "Egor Zotov",
+  "author": "Leonardo Almeida",
   "scripts": {
     "test": "jest",
     "lint": "vue-cli-service lint",
@@ -74,6 +74,6 @@
   "main": "src/main.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/egorzot/vue-form-generator-element.git"
+    "url": "git+https://github.com/gt4w-consultoria/vue-form-generator-element-gt4w.git"
   }
 }
