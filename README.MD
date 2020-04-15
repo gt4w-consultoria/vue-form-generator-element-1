@@ -1,5 +1,5 @@
-### About
-Fields for [vue-form-generator](https://github.com/vue-generators/vue-form-generator) module with [Element css framework](http://element.eleme.io).
+### Sobre
+Fields for [vue-form-generator-gt4w](https://github.com/gt4w-consultoria/vue-form-generator-gt4w) module with [Element css framework](http://element.eleme.io). 
 
 ### Usage
 
@@ -9,8 +9,23 @@ yarn add vue-form-generator-element-gt4w
 
 Add following code in main.js:
 ```$xslt
-import VueFormGeneratorElement from 'vue-form-generator-element'
+import VueFormGeneratorElement from 'vue-form-generator-element-gt4w'
 Vue.use(VueFormGeneratorElement)
+```
+
+Import and register the component (vue-form-generator) in the template:
+```$xslt
+import { component as VueFormGenerator } from 'vue-form-generator'
+export default {
+...
+  components: { VueFormGenerator },
+...
+}
+```
+
+Use in the template:
+```$xslt
+  vue-form-generator(:schema="schema", :model="model", :options="formOptions")
 ```
 
 See usage [example](https://github.com/egorzot/vue-form-generator-element-example).
@@ -32,8 +47,3 @@ Fields list:
 
 ### Contributing
 PR's are welcome!
-
-### Tests
-```
-yarn test
-```
