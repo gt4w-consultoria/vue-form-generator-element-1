@@ -22,6 +22,7 @@
       :end-placeholder="schema.endPlaceholder"
       :default-time="schema.defaultTime"
       :unlink-panels="!!schema.unlinkPanels"
+      class="full-width"
     />
   </el-form-item>
 </template>
@@ -55,3 +56,9 @@ export default {
   }
 };
 </script>
+
+<style scoped>
+.full-width {
+  width: 100%;
+}
+</style>
