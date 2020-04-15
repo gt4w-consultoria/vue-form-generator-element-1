@@ -1,4 +1,4 @@
-### Sobre
+### About
 Fields for [vue-form-generator-gt4w](https://github.com/gt4w-consultoria/vue-form-generator-gt4w) module with [Element css framework](http://element.eleme.io). 
 
 ### Usage
