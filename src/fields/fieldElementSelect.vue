@@ -29,7 +29,7 @@
     >
       <el-option
         v-for="item in items"
-        :key="getItemValue(item)"
+        :key="getItemId(item)"
         :label="getItemName(item)"
         :value="getItemValue(item)"
       />
@@ -145,17 +145,21 @@ export default {
 
     getItemValue(item) {
       if (isObject(item)) {
-        // if (
-        //   typeof this.schema.selectOptions !== "undefined" &&
-        //   typeof this.schema.selectOptions.value !== "undefined"
-        // ) {
-        //   return item[this.schema.selectOptions.value];
-        // }
-        // Use 'id' instead of 'value' cause of backward compatibility
+        if (typeof this.schema.valueKey !== "undefined") {
+          return item;
+        }
+        throw "`valueKey` is not defined. Set the valueKey, to the property you want to be the value";
+      } else {
+        return item;
+      }
+    },
+
+    getItemId(item) {
+      if (isObject(item)) {
         if (typeof item.id !== "undefined") {
           return item.id;
         }
-        throw "`id` is not defined. If you want to use another key name, add a `value` property under `selectOptions` in the schema. https://icebob.gitbooks.io/vueformgenerator/content/fields/select.html#select-field-with-object-items";
+        throw "`id` is not defined.";
       } else {
         return item;
       }
@@ -172,7 +176,7 @@ export default {
         if (typeof item.name !== "undefined") {
           return item.name;
         }
-        throw "`name` is not defined. If you want to use another key name, add a `name` property under `selectOptions` in the schema. https://icebob.gitbooks.io/vueformgenerator/content/fields/select.html#select-field-with-object-items";
+        throw "`name` is not defined";
       } else {
         return item;
       }
